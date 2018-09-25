@@ -43,7 +43,7 @@ class ProductSaveObserver implements ObserverInterface
     {
 		$product = $observer->getEvent()->getProduct();		
         if (!$product->getIsMassupdate()) {           
-			$this->_productRuleProcessor->reindexRow($product->getId());
+			$this->_productRuleProcessor->reindexRow($product->getId(),true);
         }
         return $this;
     }

@@ -30,6 +30,7 @@ class CategorySaveObserver implements ObserverInterface
 					$category->getSmartRuleError()
 				);
 			} else {
+                /** @var \Faonni\SmartCategory\Model\Rule $rule */
 				$rule = $category->getSmartRule();
 				if ($rule) {
 					$rule->setId($category->getId());

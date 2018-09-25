@@ -37,5 +37,9 @@
 	-->	    
     <event name="adminhtml_catalog_product_attribute_edit_frontend_prepare_form">
         <observer name="faonni_smart_category" instance="Faonni\SmartCategory\Observer\AttributePrepareObserver" />
-    </event>                
+    </event>
+
+    <event name="faonni_smartcategory_rule_save_after">
+        <observer name="faonny_smart_category" instance="Faonni\SmartCategory\Observer\RuleChangeObserver" />
+    </event>
 </config>
