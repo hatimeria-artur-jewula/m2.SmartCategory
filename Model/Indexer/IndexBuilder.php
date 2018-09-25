@@ -236,9 +236,10 @@ class IndexBuilder
 				$this->insertMultiple($ruleId, [$productId => '1']);
 			}
             return $this;
+        } else {
+            $this->cleanByIds($ruleId, [$productId]);
         }
-		
-        $this->cleanByIds($ruleId, [$productId]);
+
         return $this;
     }
 
